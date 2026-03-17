@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vardim – Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #2196F3;
+    --blue-dark: #1565C0;
+    --blue-light: #e3f2fd;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bg: #f9fafb;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    padding: 64px 24px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; right: -40px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .app-icon {
+    width: 80px; height: 80px;
+    background: rgba(255,255,255,0.18);
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    position: relative; z-index: 1;
+  }
+
+  .app-icon svg { width: 48px; height: 48px; }
+
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: white;
+    margin-bottom: 8px;
+    position: relative; z-index: 1;
+  }
+
+  header p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 400;
+    position: relative; z-index: 1;
+  }
+
+  .badge {
+    display: inline-block;
+    margin-top: 16px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50px;
+    padding: 6px 18px;
+    font-size: 13px;
+    color: white;
+    font-weight: 500;
+    position: relative; z-index: 1;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .effective {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 48px;
+    padding: 12px 20px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  .section {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 32px;
+    margin-bottom: 20px;
+  }
+
+  .section-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--blue-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 12px;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  .highlight {
+    background: var(--blue-light);
+    border-left: 3px solid var(--blue);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--blue-dark);
+    font-weight: 500;
+  }
+
+  .permission-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .permission-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .permission-row:first-child { padding-top: 0; }
+
+  .perm-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .perm-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .perm-desc {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 24px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  footer a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="6" width="32" height="30" rx="5" fill="white" opacity="0.9"/>
+      <rect x="8" y="16" width="5" height="5" rx="1.5" fill="#2196F3"/>
+      <rect x="16" y="16" width="5" height="5" rx="1.5" fill="#2196F3"/>
+      <rect x="24" y="16" width="5" height="5" rx="1.5" fill="#2196F3"/>
+      <rect x="8" y="24" width="5" height="5" rx="1.5" fill="#4CAF50"/>
+      <rect x="16" y="24" width="5" height="5" rx="1.5" fill="#F44336"/>
+      <rect x="24" y="24" width="5" height="5" rx="1.5" fill="#4CAF50"/>
+      <circle cx="36" cy="34" r="10" fill="#2196F3"/>
+      <path d="M36 28v7l4 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <h1>Vardim</h1>
+  <p>Privacy Policy</p>
+  <div class="badge">Shift Tracking System</div>
+</header>
+
+<main>
+
+  <div class="effective">
+    Effective Date: March 14, 2026 &nbsp;·&nbsp; Last Updated: March 14, 2026
+  </div>
+
+  <div class="section">
+    <div class="section-icon">👋</div>
+    <h2>Overview</h2>
+    <p>Vardim is a shift tracking application designed to help you manage and monitor your work schedule. We are committed to protecting your privacy and being transparent about how the app works.</p>
+    <div class="highlight">
+      Vardim does not collect, store, or share any personal data on external servers. All data stays on your device.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-icon">📋</div>
+    <h2>Information We Collect</h2>
+    <p>Vardim does not collect any personally identifiable information. The app stores your shift settings and preferences locally on your device only. This includes:</p>
+    <p>· Your selected shift group (A, B, C, or D)<br>
+    · Shift cycle definitions and working hours<br>
+    · Notification preferences<br>
+    · App settings and configurations</p>
+    <p>None of this information is transmitted to us or any third party.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-icon">🔐</div>
+    <h2>Permissions Used</h2>
+
+    <div class="permission-row">
+      <div class="perm-icon">🔔</div>
+      <div>
+        <div class="perm-title">Notifications</div>
+        <p class="perm-desc">Used to send you shift reminders before your shift begins. You can enable or disable this at any time in the app settings or your device settings. No notification data is shared with third parties.</p>
+      </div>
+    </div>
+
+    <div class="permission-row">
+      <div class="perm-icon">📅</div>
+      <div>
+        <div class="perm-title">Calendar</div>
+        <p class="perm-desc">Used to display your shift schedule within the app's calendar view. We do not read, modify, or access your personal calendar events. Calendar data remains entirely on your device.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <div class="section-icon">🌐</div>
+    <h2>Third-Party Services</h2>
+    <p>Vardim does not use any third-party analytics, advertising, or tracking services. We do not share your data with any third parties.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-icon">👶</div>
+    <h2>Children's Privacy</h2>
+    <p>Vardim does not knowingly collect any information from children under the age of 13. The app does not target or appeal to children.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-icon">📝</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. We encourage you to review this policy periodically.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-icon">✉️</div>
+    <h2>Contact Us</h2>
+    <p>If you have any questions or concerns about this Privacy Policy, please feel free to contact us.</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Vardim. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
