@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vardim – Support</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #2196F3;
+    --blue-dark: #1565C0;
+    --blue-light: #e3f2fd;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bg: #f9fafb;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    padding: 64px 24px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; right: -40px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .app-icon {
+    width: 80px; height: 80px;
+    background: rgba(255,255,255,0.18);
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    position: relative; z-index: 1;
+  }
+
+  .app-icon svg { width: 48px; height: 48px; }
+
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: white;
+    margin-bottom: 8px;
+    position: relative; z-index: 1;
+  }
+
+  header p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 400;
+    position: relative; z-index: 1;
+  }
+
+  .badge {
+    display: inline-block;
+    margin-top: 16px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50px;
+    padding: 6px 18px;
+    font-size: 13px;
+    color: white;
+    font-weight: 500;
+    position: relative; z-index: 1;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .section {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 32px;
+    margin-bottom: 20px;
+  }
+
+  .section-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--blue-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 12px;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+  }
+
+  .faq-item:first-child { padding-top: 0; }
+  .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .faq-q {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .faq-a {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 8px;
+  }
+
+  .highlight {
+    background: var(--blue-light);
+    border-left: 3px solid var(--blue);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--blue-dark);
+    font-weight: 500;
+  }
+
+  .step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .step:last-child { border-bottom: none; padding-bottom: 0; }
+  .step:first-child { padding-top: 0; }
+
+  .step-num {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .step-desc {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 24px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  footer a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="6" width="32" height="30" rx="5" fill="white" opacity="0.9"/>
+      <rect x="8" y="16" width="5" height="5" rx="1.5" fill="#2196F3"/>
+      <rect x="16" y="16" width="5" height="5" rx="1.5" fill="#2196F3"/>
+      <rect x="24" y="16" width="5" height="5" rx="1.5" fill="#2196F3"/>
+      <rect x="8" y="24" width="5" height="5" rx="1.5" fill="#4CAF50"/>
+      <rect x="16" y="24" width="5" height="5" rx="1.5" fill="#F44336"/>
+      <rect x="24" y="24" width="5" height="5" rx="1.5" fill="#4CAF50"/>
+      <circle cx="36" cy="34" r="10" fill="#2196F3"/>
+      <path d="M36 28v7l4 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <h1>Vardim</h1>
+  <p>Support Center</p>
+  <div class="badge">Shift Tracking System</div>
+</header>
+
+<main>
+
+  <div class="section">
+    <div class="section-icon">🚀</div>
+    <h2>Getting Started</h2>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">Select Your Shift Group</div>
+        <p class="step-desc">Open Settings and choose your shift group (A, B, C, or D) and shift direction (Forward or Backward).</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">Set Your Start Date</div>
+        <p class="step-desc">Enter the date your current shift cycle began. Vardim will automatically calculate the rest of your schedule.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">Customize Shift Hours</div>
+        <p class="step-desc">Set the start and end times for Day, Evening, and Night shifts to match your workplace schedule.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-title">Enable Notifications</div>
+        <p class="step-desc">Turn on shift reminders in Settings to receive alerts before your shift begins. You can adjust the reminder time as needed.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <div class="section-icon">❓</div>
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Why is my shift calendar showing incorrect days?</div>
+      <p class="faq-a">Make sure the start date in Settings matches the first day of your current shift cycle. An incorrect start date will cause the entire schedule to be offset.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">I am not receiving shift notifications.</div>
+      <p class="faq-a">Go to your iPhone Settings → Notifications → Vardim and make sure notifications are allowed. Also check that "Send Notification" is enabled inside the app's Settings screen.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can I track multiple shift groups at the same time?</div>
+      <p class="faq-a">Yes. Vardim supports A, B, C, and D groups simultaneously. You can view all groups on the calendar by enabling "Show Other Groups" in Settings.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I change my shift cycle duration?</div>
+      <p class="faq-a">Open Settings → Shift Cycle Definitions and use the +/- buttons to adjust the number of working days and days off for each shift type.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is my data backed up to the cloud?</div>
+      <p class="faq-a">No. All data is stored locally on your device only. This ensures your privacy but also means data will be lost if you delete the app. We recommend noting your settings before reinstalling.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I reset all data?</div>
+      <p class="faq-a">Go to Settings → scroll to the bottom → tap "Delete All Data". This action is permanent and cannot be undone.</p>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <div class="section-icon">✉️</div>
+    <h2>Contact Us</h2>
+    <p>Couldn't find what you were looking for? We're happy to help. Send us an email and we'll get back to you as soon as possible.</p>
+    <div class="highlight">
+      We typically respond within 1–2 business days.
+    </div>
+    <br>
+    <a href="mailto:support@vardim.app" class="contact-btn">
+      ✉️ &nbsp; Send an Email
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Vardim. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
